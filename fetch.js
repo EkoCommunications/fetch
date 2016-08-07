@@ -1,9 +1,11 @@
 (function(self) {
   'use strict';
 
-  if (self.fetch) {
+  // NOTE (travis): disabling built-in fetch support to force electron to use
+  // use fetch polyfill with custom cookie support
+  /*if (self.fetch) {
     return
-  }
+  }*/
 
   var support = {
     searchParams: 'URLSearchParams' in self,
